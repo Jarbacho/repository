@@ -3,11 +3,92 @@
     <head>
         <title>Derivado de "Proyecto: libro de recetas"</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css.css">
+        <link rel="stylesheet" href="css/css.css">
+        <SCRIPT Language="JavaScript">
+        alert("¡Bienvenido a nuestra pagina!");
+       var nom;
+       nom=prompt("ESCRIBE TU NOMBRE","NOMBRE");
+       alert ("Mucho gusto " + nom);
+       
+       function confirmar()
+       {
+       return confirm ("PAGINA PARA MAYORES DE 18")
+       }
+       function abrir_ventana()
+       {
+       window.open("https://r.search.yahoo.com/_ylt=AwrLA02cbNFnqjMaezW_.wt.;_ylu=Y29sbwMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1741806876/RO=10/RU=https%3a%2f%2fwww.wattpad.com%2f%3flocale%3des_ES/RK=2/RS=tsrO7igqY0umB7W4T4RRCH8IFbQ-");
+       }
+       function parar_abrir()
+       {
+       clearTimeout(pop);
+       }
+       pop = setInterval ("abrir_ventana()",3000);
+       
+       function Ver_Hora()
+       {
+       var mihora = new Date()
+       var horas = mihora.getHours().toString();
+       var minutos = mihora.getMinutes().toString();
+       if(minutos.length== 1) minutos= "0" + minutos;
+       var segundos = mihora.getSeconds().toString();
+       if(segundos.length== 1) segundos= "0" + segundos;
+       
+       document.forms[0].mireloj.value = horas + " : " + minutos + " : " + segundos;
+       }
+       function ver_imagen()
+       {
+       if (!document.images)
+       return
+       document.images.img.src=
+       document.imagenes.imagen.options[document.imagenes.imagen.selectedIndex].value
+       }
+        </SCRIPT>
+      <input type=button value=Atrás onclick="history.go(-1)">
+        
+        
+        
+        
+        
     </head>
     <body>
-       
+       <a href="http://recursostic.educacion.es/observatorio/web/gl/software/programacion/490-lorena-arranz" onclick="return confirmar()"> enlace guia java </a>
+       <Input type=button value="stop spam" onclick="parar_abrir()">
+       <form>
+       <p align="center">
+       <input type="text" size="10" name="mireloj">
+       </p>
+       </form>
+       <script>
+       var r= setInterval ("Ver_Hora()" ,500);
+       </script>
+       <form name="imagenes">
+       <select name="imagenes" size="1" onChange="Ver_Imagen()">
+       <option> Elige imagen </option>
+       <option value="th.jpg">1 </option>
+       <option value="pollo.jpg">2 </option>
+       <option value="mario.jpg">3 </option>
+       </select>
+       </form>
+       <img src="th.jpg" name="img" width="600" height="436" border=3>
+        <img src="pollo.jpg" name="img" width="600" height="436" border=3>
+         <img src="mario.jpg" name="img" width="600" height="436" border=3>
+        <script languaje="javascript">
+            function mailpage()
+                {
+                    mail_str="mailto:nombre@dominio.com?subject=Ejemplo: " + document.title;
+                    mail_str += "&body= VVisita esto (https://css-tricks.com/revealing-photo-slider/) -- "
+                    + document.title;
+                    mail_str += ". Enlace: " + location.href;
+                    location.href = mail_str;
+                }
+        </script>
+        <a href="javascript:mailpage()"> Mandar</a>
+    
+        
+        
         <h1>Corbage's Recipe Book</h1>
+
+        
         
         
         
